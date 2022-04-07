@@ -15,12 +15,17 @@ jobs:
           command: |
             cd ./test-project/project/
             node ./../../src/cli.js build test-plugin,test-theme --once
-          name: Run test projects - site
+          name: Run test projects - projects
       - run:
           command: |
             cd ./test-project/project/
             node ./../../src/cli.js build --site --once
           name: Run test projects - site
+      - run:
+          command: |
+            cd ./test-project/project/plugins/test-plugin/
+            node ./../../../../src/cli.js build --once
+          name: Run test projects - single
       - persist_to_workspace:
           root: ~/project
           paths:
