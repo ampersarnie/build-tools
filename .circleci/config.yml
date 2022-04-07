@@ -4,7 +4,7 @@ orbs:
   node: circleci/node@4.7.0
 
 jobs:
-  build_and_test: # this can be any name you choose
+  self_test: # this can be any name you choose
     docker:
       - image: cimg/node:17.2.0
     steps:
@@ -20,3 +20,8 @@ jobs:
           root: ~/project
           paths:
             - .
+
+workflows:
+  test_build_tools:
+    jobs:
+      - self_test
