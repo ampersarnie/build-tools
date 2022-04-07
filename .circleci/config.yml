@@ -14,7 +14,7 @@ jobs:
       - run:
           command: |
             cd ./test-project/project/
-            node ./../../src/cli.js --site --once
+            node ./../../src/cli.js build --site --once
           name: Run test projects - site
       - persist_to_workspace:
           root: ~/project
