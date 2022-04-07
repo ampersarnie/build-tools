@@ -1,0 +1,8 @@
+{
+    "name": "test-project",
+    "scripts": {
+        "build:site": "./../src/cli.js --site --once",
+        "build:projects": "./../src/cli.js test-plugin,test-theme --once",
+        "build:single": "./../src/cli.js --once"
+    }
+}
