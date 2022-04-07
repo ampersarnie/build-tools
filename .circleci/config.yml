@@ -14,6 +14,11 @@ jobs:
       - run:
           command: |
             cd ./test-project/project/
+            node ./../../src/cli.js build test-plugin,test-theme --once
+          name: Run test projects - site
+      - run:
+          command: |
+            cd ./test-project/project/
             node ./../../src/cli.js build --site --once
           name: Run test projects - site
       - persist_to_workspace:
