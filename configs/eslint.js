@@ -6,6 +6,8 @@ module.exports = {
     __PROD__: true,
     __TEST__: true,
     wp: true,
+    lodash: true,
+    moment: true,
   },
   env: {
     browser: true,
