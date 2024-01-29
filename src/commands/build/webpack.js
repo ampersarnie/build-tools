@@ -53,7 +53,6 @@ module.exports = (__PROJECT_CONFIG__, mode) => {
 
     externals: {
       moment: 'moment',
-      lodash: ['lodash', 'lodash-es'],
       react: 'React',
       'react-dom': 'ReactDOM',
       jquery: 'jQuery',
